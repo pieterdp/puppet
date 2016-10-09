@@ -1,0 +1,6 @@
+#! /bin/bash
+
+sudo /opt/backup/external_backup.sh
+
+
+exit 0

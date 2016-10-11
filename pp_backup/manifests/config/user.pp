@@ -8,4 +8,8 @@ class pp_backup::config::user () inherits pp_backup {
         authorized_keys => $pp_backup::backup_user_auth_keys,
         ssh_keys        => $pp_backup::backup_user_ssh_keys,
     }
+
+    sudo::conf {'backup':
+        content => 'rdiff-backup ALL=(root) NOPASSWD: /usr/bin/rdiff-backup',
+    }
 }
